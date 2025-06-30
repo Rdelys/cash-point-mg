@@ -16,10 +16,11 @@ export default function MobileMoneyAirtelPage({ navigation }) {
 
 <TouchableOpacity
   style={styles.button}
-  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Airtel' })}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Airtel', transactionType: 'Mobile Money' })}
 >
   <Text style={styles.buttonText}>Saisie Journalier</Text>
 </TouchableOpacity>
+
 
     </View>
   );

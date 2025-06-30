@@ -16,7 +16,7 @@ export default function MobileMoneyMvolaPage({ navigation }) {
 
 <TouchableOpacity
   style={styles.button}
-  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Mvola' })}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Mvola', transactionType: 'Mobile Money' })}
 >
   <Text style={styles.buttonText}>Saisie Journalier</Text>
 </TouchableOpacity>

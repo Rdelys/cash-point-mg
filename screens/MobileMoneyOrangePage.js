@@ -16,7 +16,7 @@ export default function MobileMoneyOrangePage({ navigation }) {
 
 <TouchableOpacity
   style={styles.button}
-  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Orange' })}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Orange', transactionType: 'Mobile Money' })}
 >
   <Text style={styles.buttonText}>Saisie Journalier</Text>
 </TouchableOpacity>

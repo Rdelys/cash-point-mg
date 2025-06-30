@@ -16,9 +16,9 @@ export default function CreditMvolaPage({ navigation }) {
 
 <TouchableOpacity
   style={styles.button}
-  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Mvola' })}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Mvola', transactionType: 'Crédit' })}
 >
-  <Text style={styles.buttonText}>Saisie Journalier</Text>
+  <Text style={styles.buttonText}>Saisie Crédit</Text>
 </TouchableOpacity>
 
     </View>

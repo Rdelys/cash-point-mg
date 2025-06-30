@@ -16,9 +16,9 @@ export default function CreditOrangePage({ navigation }) {
 
 <TouchableOpacity
   style={styles.button}
-  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Orange' })}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Orange', transactionType: 'Crédit' })}
 >
-  <Text style={styles.buttonText}>Saisie Journalier</Text>
+  <Text style={styles.buttonText}>Saisie Crédit</Text>
 </TouchableOpacity>
 
     </View>
