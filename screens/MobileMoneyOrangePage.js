@@ -7,20 +7,20 @@ export default function MobileMoneyOrangePage({ navigation }) {
       <Text style={styles.title}>Orange - Mobile Money</Text>
 
       {/* Bouton Dashboard */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Dashboard')}
-      >
-        <Text style={styles.buttonText}>Dashboard</Text>
-      </TouchableOpacity>
+     <TouchableOpacity
+  style={styles.button}
+  onPress={() => navigation.navigate('Dashboard', { operator: 'Orange' })}
+>
+  <Text style={styles.buttonText}>Dashboard</Text>
+</TouchableOpacity>
 
-      {/* Bouton Saisie Journalier */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('SaisieJournalier')}
-      >
-        <Text style={styles.buttonText}>Saisie Journalier</Text>
-      </TouchableOpacity>
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Orange' })}
+>
+  <Text style={styles.buttonText}>Saisie Journalier</Text>
+</TouchableOpacity>
+
     </View>
   );
 }

@@ -4,23 +4,23 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 export default function MobileMoneyAirtelPage({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Mvola - Mobile Money</Text>
+      <Text style={styles.title}>Airtel - Mobile Money</Text>
 
       {/* Bouton Dashboard */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Dashboard')}
-      >
-        <Text style={styles.buttonText}>Dashboard</Text>
-      </TouchableOpacity>
+     <TouchableOpacity
+  style={styles.button}
+  onPress={() => navigation.navigate('Dashboard', { operator: 'Airtel' })}
+>
+  <Text style={styles.buttonText}>Dashboard</Text>
+</TouchableOpacity>
 
-      {/* Bouton Saisie Journalier */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('SaisieJournalier')}
-      >
-        <Text style={styles.buttonText}>Saisie Journalier</Text>
-      </TouchableOpacity>
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Airtel' })}
+>
+  <Text style={styles.buttonText}>Saisie Journalier</Text>
+</TouchableOpacity>
+
     </View>
   );
 }

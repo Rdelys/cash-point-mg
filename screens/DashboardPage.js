@@ -1,26 +1,22 @@
+// DashboardPage.js
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default function MobileMoneyMvolaPage({ navigation }) {
+export default function DashboardPage({ route, navigation }) {
+  const { operator } = route.params;  // Récupère le nom de l'opérateur depuis les paramètres
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Mvola - Mobile Money</Text>
+      <Text style={styles.title}>{operator} - Dashboard</Text>
 
-      {/* Bouton Dashboard */}
       <TouchableOpacity
-  style={styles.button}
-  onPress={() => navigation.navigate('Dashboard', { operator: 'Mvola' })}
->
-  <Text style={styles.buttonText}>Dashboard</Text>
-</TouchableOpacity>
+        style={styles.button}
+        onPress={() => navigation.navigate('SaisieJournalier', { operator })}
+      >
+        <Text style={styles.buttonText}>Saisie Journalier</Text>
+      </TouchableOpacity>
 
-<TouchableOpacity
-  style={styles.button}
-  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Mvola' })}
->
-  <Text style={styles.buttonText}>Saisie Journalier</Text>
-</TouchableOpacity>
-
+      {/* Ajouter d'autres boutons si nécessaire */}
     </View>
   );
 }

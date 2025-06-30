@@ -8,19 +8,19 @@ export default function CreditMvolaPage({ navigation }) {
 
       {/* Bouton Dashboard */}
       <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Dashboard')}
-      >
-        <Text style={styles.buttonText}>Dashboard</Text>
-      </TouchableOpacity>
+  style={styles.button}
+  onPress={() => navigation.navigate('Dashboard', { operator: 'Mvola' })}
+>
+  <Text style={styles.buttonText}>Dashboard</Text>
+</TouchableOpacity>
 
-      {/* Bouton Saisie Journalier */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('SaisieJournalier')}
-      >
-        <Text style={styles.buttonText}>Saisie Journalier</Text>
-      </TouchableOpacity>
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => navigation.navigate('SaisieJournalier', { operator: 'Mvola' })}
+>
+  <Text style={styles.buttonText}>Saisie Journalier</Text>
+</TouchableOpacity>
+
     </View>
   );
 }
